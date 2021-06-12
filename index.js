@@ -51,9 +51,15 @@ function show(data, limit, search) {
         <span class="badge badge-info">Rank: ${post.market_cap_rank}</span>
        
         <hr>
-        <span class="badge badge-secondary">Price USD: ${post.current_price}</span> 
-        <span class="badge badge-success">24 change: ${post.price_change_24h}</span>
-        <span class="badge badge-warning">24h % change: ${post.price_change_percentage_24h}</span>      
+        <span class="badge badge-secondary">Price USD: ${post.current_price.toFixed(
+          2
+        )}</span> 
+        <span class="badge badge-success">24 change: ${post.price_change_24h.toFixed(
+          2
+        )}</span>
+        <span class="badge badge-warning">24h % change: ${post.price_change_percentage_24h.toFixed(
+          2
+        )}</span>      
         
       </div>
     </div>
