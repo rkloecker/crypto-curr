@@ -1,5 +1,86 @@
-a {
-	
-	
-	
+:root {
+  --light: #fff;
+  --dark: #000;
+
+  --dark-purple: #6d1b7b;
+  --mid-purple: #9c27b0;
+  --light-purple: #af52bf;
+
+  --dark-deeppurple: #482880;
+  --mid-deeppurple: #673ab7;
+  --light-deeppurple: #8561c5;
+
+  --dark-teal: #00695f;
+  --mid-teal: #009688;
+  --light-teal: #33ab9f;
+
+  --dark-orange: #b26a00;
+  --mid-orange: #ff9800;
+  --light-orange: #ffac33;
+}
+
+.bg-primary {
+  background-color: var(--dark-purple) !important;
+}
+
+.btn-dark {
+  background-color: var(--dark-deeppurple) !important;
+}
+
+.badge-info {
+  background-color: var(--dark-teal) !important;
+}
+
+.badge-sec {
+  background-color: var(--light-teal) !important;
+  color: var(--light) !important;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+a:hover {
+  color: var(--light-purple) !important;
+  cursor: pointer;
+}
+
+.navbar-brand a {
+  color: var(--dark) !important;
+  background-color: #fff;
+}
+
+.navbar-brand a:hover {
+  color: var(--light) !important;
+  background-color: #6d1b7b;
+  cursor: pointer;
+}
+
+[data-tooltip]:before {
+  /* needed - do not touch */
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 0;
+
+  /* customizable */
+  transition: all 0.3s ease;
+  padding: 8px;
+  color: var(--light) !important;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px silver;
+}
+
+[data-tooltip]:hover:before {
+  /* needed - do not touch */
+  opacity: 1;
+
+  /* customizable */
+  background-color: var(--dark-purple) !important;
+  margin-top: -50px;
+  margin-left: 20px;
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+  pointer-events: none;
 }
