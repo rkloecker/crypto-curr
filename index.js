@@ -36,12 +36,14 @@ searchForm.addEventListener("submit", (e) => {
 });
 
 function showResult(url, limit = 100, search, cname) {
+  document.getElementById("results").innerHTML = "loading...";
   fetch(url)
     .then((resp) => resp.json())
     .then((data) => {
       if (cname) showDetail(data, cname);
       else show(data, limit, search);
-    });
+    })
+    .catch((error) => console.log(error));
 }
 
 function show(data, limit, search) {
